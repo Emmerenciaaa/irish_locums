@@ -65,7 +65,7 @@ class _AuthStartPageState extends State<AuthStartPage> {
                 gapTiny,
                 gapMedium,
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: TextBody(
                     'Start your journey with our community of active and thriving healthcare locums and professionals.',
                     maxLines: 3,
