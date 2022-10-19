@@ -5,11 +5,11 @@ import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/core/constants/fonts.dart';
 import 'package:irish_locums/core/constants/ui_helpers.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:irish_locums/core/navigators/route_name.dart';
 
 class PageViewWidget extends StatelessWidget {
   const PageViewWidget({
+    required this.currentIndexPage,
     required this.image,
     required this.onTap,
     required this.text,
@@ -21,6 +21,7 @@ class PageViewWidget extends StatelessWidget {
   final String image;
   final String title;
   final String text;
+  final double currentIndexPage;
   final Color? textColor;
 
   final VoidCallback onTap;
@@ -81,7 +82,7 @@ class PageViewWidget extends StatelessWidget {
                     child: Center(
                       child: TextBody(
                         'skip',
-                        fontSize: 16,
+                        fontSize: 24,
                         color: AppColors.yellow,
                       ),
                     ),
@@ -93,7 +94,7 @@ class PageViewWidget extends StatelessWidget {
                     children: [
                       DotsIndicator(
                         dotsCount: 4,
-                        //position: currentIndexPage,
+                        position: currentIndexPage,
                         decorator: const DotsDecorator(
                           color: AppColors.dotColor, // Inactive color
                           activeColor:AppColors.yellow,
@@ -101,7 +102,7 @@ class PageViewWidget extends StatelessWidget {
                       ),
                       FloatingActionButton(
                         backgroundColor: AppColors.yellow,
-                        onPressed: (){},
+                        onPressed: onTap,
                         child:SvgPicture.asset(
                           AppAssets.forwardArrow,
                         ),
