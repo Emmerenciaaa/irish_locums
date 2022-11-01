@@ -7,8 +7,9 @@ class AppAssets {
   static const String background = 'assets/images/background.png';
   static const String logo = 'assets/images/logo.png';
   static const String manImage = 'assets/images/manImage.png';
+  static const String appbar = 'assets/images/appbar.png';
 
   //Icons
   static const String forwardArrow = 'assets/icons/forward.svg';
-
+  static const String visibility  = 'assets/icons/visibility.svg';
 }

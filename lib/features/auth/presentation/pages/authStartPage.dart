@@ -3,6 +3,7 @@ import 'package:irish_locums/core/constants/app_asset.dart';
 import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/core/constants/fonts.dart';
 import 'package:irish_locums/core/constants/ui_helpers.dart';
+import 'package:irish_locums/core/navigators/route_name.dart';
 
 class AuthStartPage extends StatefulWidget {
   const AuthStartPage({Key? key}) : super(key: key);
@@ -80,19 +81,27 @@ class _AuthStartPageState extends State<AuthStartPage> {
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 42),
-                  child: Container(
-                    width: double.infinity,
-                    decoration:const BoxDecoration(
-                      color: AppColors.secondaryColor,
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                    ),
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical:16),
-                        child: TextBody(
-                          'Locum Sign-Up',
-                          color: AppColors.white,
-                          fontSize: 14,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        RouteName.signin,
+                      );
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      decoration:const BoxDecoration(
+                        color: AppColors.secondaryColor,
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical:16),
+                          child: TextBody(
+                            'Locum Sign-Up',
+                            color: AppColors.white,
+                            fontSize: 14,
+                          ),
                         ),
                       ),
                     ),
