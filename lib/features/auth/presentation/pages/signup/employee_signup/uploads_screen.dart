@@ -6,22 +6,17 @@ import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/core/constants/fonts.dart';
 import 'package:irish_locums/core/constants/ui_helpers.dart';
 import 'package:irish_locums/core/navigators/route_name.dart';
+import 'package:irish_locums/features/auth/presentation/widgets/upload_widget.dart';
 
-class AdditionalInfo extends StatefulWidget {
-  const AdditionalInfo({Key? key}) : super(key: key);
+class EmployeeUploads extends StatefulWidget {
+  const EmployeeUploads({Key? key}) : super(key: key);
 
   @override
-  State<AdditionalInfo> createState() => _AdditionalInfoState();
+  State<EmployeeUploads> createState() => _EmployeeUploadsState();
 }
 
-class _AdditionalInfoState extends State<AdditionalInfo> {
-  final _countyDropdown = [
-    'MPS',
-    'McLernons',
-    'QuickScript',
-    'QuickScript.net',
-    'Touchstore'
-  ];
+class _EmployeeUploadsState extends State<EmployeeUploads> {
+
   bool isChecked = false;
 
   Color getColor(Set<MaterialState> states) {
@@ -33,19 +28,20 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
     if (states.any(interactiveStates.contains)) {
       return Colors.blue;
     }
-    return AppColors.yellow;
+    return AppColors.black;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset : false,
         backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body: Padding(
+        body:Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
+              //height: MediaQuery.of(context).size.height-MediaQuery.of(context).padding.top- MediaQuery.of(context).padding.top-44,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -56,13 +52,13 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
                       gapMedium,
                       gapSmall,
                       H1(
-                        'Employer Sign-Up',
+                        'Employee Sign-Up',
                         color: AppColors.black,
                         fontWeight: FontWeight.bold,
                       ),
                       gapSmall,
                       TextBody(
-                        'Additional Info',
+                        'Uploads',
                         fontWeight: FontWeight.bold,
                         color: AppColors.textGrey,
                         fontSize: 12,
@@ -70,52 +66,28 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
                       gapMedium,
                       gapSmall,
                       TextBody(
-                        'Pharmacy Dispensing Software',
+                        'Your Photo',
                         color: AppColors.black,
                         fontSize: 14,
                       ),
                       gapTiny,
-                      Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(color: AppColors.borderColor),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: DropdownButtonFormField(
-                            decoration:
-                                const InputDecoration(border: InputBorder.none),
-                            dropdownColor: AppColors.backgroundLightBlue,
-                            onChanged: (val) {},
-                            items: _countyDropdown.map((e) {
-                              return DropdownMenuItem(
-                                value: e,
-                                child: Text(e),
-                              );
-                            }).toList(),
-                          ),
-                        ),
-                      ),
+                      const UploadWidget(),
                       gapSmall,
                       gapMedium,
                       TextBody(
-                        'Pharmacy Registration Number',
+                        'Garda Vetting',
                         color: AppColors.black,
                         fontSize: 14,
                       ),
                       gapTiny,
-                      const InputField(
-                        controller: null,
-                        placeholder: '',
-                        placeholderColor: AppColors.borderColor,
-                      ),
-                      gapMedium,
+                      const UploadWidget(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Checkbox(
                             value: isChecked,
                             fillColor:
-                                MaterialStateProperty.resolveWith(getColor),
+                            MaterialStateProperty.resolveWith(getColor),
                             onChanged: (bool? value) {
                               setState(() {
                                 isChecked = value!;
@@ -130,16 +102,16 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
                                 color: AppColors.textGrey,
                               ),
                               children: <TextSpan>[
-                                 TextSpan(
-                                     text: 'I agree to the ',
-                                   style: TextStyle(
-                                     fontSize: 12
-                                   ),
-                                 ),
-                                 TextSpan(
+                                TextSpan(
+                                  text: 'I agree to the ',
+                                  style: TextStyle(
+                                      fontSize: 12
+                                  ),
+                                ),
+                                TextSpan(
                                     text: 'Terms and Conditions',
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.bold,
                                       color: AppColors.yellow,
                                       fontSize: 12,
                                     )),
@@ -149,6 +121,7 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
                         ],
                       ),
                       gapLarge,
+
                     ],
                   ),
                   Padding(
@@ -163,10 +136,78 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
                           onTap: () {
                             Navigator.pushReplacementNamed(
                               context,
-                              RouteName.signupUserUpload,
+                              RouteName.authStartPage,
                             );
                           },
                         ),
+                        gapMedium,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 22,
+                              height: 5,
+                              decoration: const BoxDecoration(
+                                  color:AppColors.indicatorActiveColor
+                              ),
+                              child: const Text(''),
+                            ),
+                            gapTiny,
+                            Container(
+                              width: 22,
+                              height: 5,
+                              decoration: const BoxDecoration(
+                                  color:AppColors.indicatorActiveColor
+                              ),
+                              child: const Text(''),
+                            ),
+                            gapTiny,
+                            Container(
+                              width: 22,
+                              height: 5,
+                              decoration: const BoxDecoration(
+                                  color:AppColors.indicatorActiveColor
+                              ),
+                              child: const Text(''),
+                            ),
+                            gapTiny,
+                            Container(
+                              width: 22,
+                              height: 5,
+                              decoration: const BoxDecoration(
+                                  color:AppColors.indicatorActiveColor
+                              ),
+                              child: const Text(''),
+                            ),
+                            gapTiny,
+                            Container(
+                              width: 22,
+                              height: 5,
+                              decoration: const BoxDecoration(
+                                  color:AppColors.indicatorActiveColor
+                              ),
+                              child: const Text(''),
+                            ),
+                            gapTiny,
+                            Container(
+                              width: 22,
+                              height: 5,
+                              decoration: const BoxDecoration(
+                                  color:AppColors.dotColor
+                              ),
+                              child: const Text(''),
+                            ),
+                            gapTiny,
+                            Container(
+                              width: 22,
+                              height: 5,
+                              decoration: const BoxDecoration(
+                                  color:AppColors.indicatorActiveColor
+                              ),
+                              child: const Text(''),
+                            ),
+                          ],
+                        )
                       ],
                     ),
                   ),
@@ -174,6 +215,7 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
               ),
             ),
           ),
-        ));
+        )
+    );
   }
 }

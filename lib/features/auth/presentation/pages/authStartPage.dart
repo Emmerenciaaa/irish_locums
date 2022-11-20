@@ -85,7 +85,7 @@ class _AuthStartPageState extends State<AuthStartPage> {
                     onTap: () {
                       Navigator.pushReplacementNamed(
                         context,
-                        RouteName.signin,
+                        RouteName.signupEmployeeUserAccount,
                       );
                     },
                     child: Container(
