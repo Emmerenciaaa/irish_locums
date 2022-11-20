@@ -1,5 +1,4 @@
 import 'package:irish_locums/core/constants/app_asset.dart';
-import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/core/navigators/route_name.dart';
 import 'package:irish_locums/features/onboarding/widgets/page_view_item.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +34,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     text:
                     'We offer work experience as well as flexible level 5 and diploma programs to meet your healthcare needs.',
                     title: 'Work Opportunities',
+                    currentIndexPage: 0,
                   ),
                   PageViewWidget(
                     image: AppAssets.onboarding3,
@@ -47,6 +47,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     text:
                     'Depending on your contract, we will ensure that all employees who work during the month are paid at the end of the month.',
                     title: 'Regular Payment',
+                    currentIndexPage: 1,
                   ),
                   PageViewWidget(
                     image: AppAssets.onboarding1,
@@ -59,6 +60,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     text:
                     'We also offer mentoring to foreign-trained pharmacists who want to practice in Ireland.',
                     title: 'Mentoring',
+                    currentIndexPage: 2,
                   ),
                   PageViewWidget(
                     image: AppAssets.onboarding2,
@@ -71,6 +73,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     text:
                     'We are open 365 days a year.\n Mon - Fri 8:00 am - 5:00 pm \n Sat - Sun 8:00 am - 1:00 pm',
                     title: '365-Day Support',
+                    currentIndexPage: 3,
                   ),
                 ],
               ),

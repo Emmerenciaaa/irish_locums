@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 
 
 class AppColors{
+  static const Color backgroundLightBlue = Color(0xffF0FBFF);
+  static const Color lightBlue = Color(0xff4DB7FE);
+  static const Color textGrey = Color(0xff6B7280);
+  static const Color indicatorActiveColor = Color(0xff475569);
+  static const Color hintColor = Color(0xff9CA3AF);
+  static const Color borderColor = Color(0xffD1D5DB);
   static const Color white = Color(0xffFFFFFF);
   static const Color primaryColor = Color(0xffFFCC00);
   static const Color secondaryColor = Color(0xff0467A2);
@@ -12,6 +18,8 @@ class AppColors{
   static const Color secondBlue = Color(0xff256DAF);
   static const Color textSecondary = Color(0xff7080A0);
   static const Color yellow = Color(0xffFFCF01);
+  static const Color black = Color(0xff000000);
+  static const Color busyLight = Color(0xffB3D1E3);
 
 
   static const Map<int, Color> colorScratch = {
