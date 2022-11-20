@@ -99,6 +99,7 @@ class _SecondResumeState extends State<SecondResume> {
                         color: AppColors.hintColor,
                         fontSize: 12,
                       ),
+                      gapSmall,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

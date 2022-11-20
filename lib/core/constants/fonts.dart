@@ -24,6 +24,7 @@ class IrishLocumsTextBase extends StatelessWidget {
       text ?? '',
       style: const TextStyle(
         fontSize: 15,
+        fontFamily: 'Roboto'
       ).merge(style),
       textAlign: textAlign,
       overflow: overflow,
@@ -42,7 +43,7 @@ class TextBody extends IrishLocumsTextBase {
         TextAlign textAlign = TextAlign.left,
         FontWeight fontWeight = FontWeight.w400,
         TextOverflow overflow = TextOverflow.visible,
-        int maxLines = 2,
+        int maxLines =4,
         double? height,
       }) : super(
     text,
