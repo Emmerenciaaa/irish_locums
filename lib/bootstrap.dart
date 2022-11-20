@@ -5,6 +5,8 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+// ignore_for_file: deprecated_member_use
+
 import 'dart:async';
 import 'dart:developer';
 
@@ -31,12 +33,12 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   };
 
   await runZonedGuarded(
-        () async {
+    () async {
       await BlocOverrides.runZoned(
-            () async => runApp(await builder()),
+        () async => runApp(await builder()),
         blocObserver: AppBlocObserver(),
       );
     },
-        (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
+    (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
   );
 }
