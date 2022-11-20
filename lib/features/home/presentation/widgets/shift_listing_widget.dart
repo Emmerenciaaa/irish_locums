@@ -39,8 +39,8 @@ class _ShiftListingWidgetState extends State<ShiftListingWidget> {
       ),
       child: getShift
           ? const FetchShiftProgressIndicator()
-          : Container(
-              height: MediaQuery.of(context).size.height * 1,
+          : SizedBox(
+              height: MediaQuery.of(context).size.height,
               child: SingleChildScrollView(
                 child: Column(
                   children: [

@@ -8,10 +8,12 @@ class BusyButton extends StatelessWidget {
       {super.key,
       required this.title,
       this.buttonColor = AppColors.secondaryColor,
+      this.textColor = AppColors.white,
       required this.onTap});
   final String title;
   final Color buttonColor;
   final VoidCallback onTap;
+  final textColor;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -28,7 +30,7 @@ class BusyButton extends StatelessWidget {
             title,
             style: GoogleFonts.roboto(
               fontSize: 14,
-              color: AppColors.white,
+              color: textColor,
             ),
           ),
         ),

@@ -23,13 +23,14 @@ class _MapListingViewWidgetState extends State<MapListingViewWidget> {
     double _currentSliderValue = 20;
 
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.75,
+      height: double.infinity,
       width: double.infinity,
       child: Stack(
         children: [
           Image.asset(
             AppAssets.map,
             width: double.infinity,
+            height: double.infinity,
             fit: BoxFit.fill,
           ),
           Padding(

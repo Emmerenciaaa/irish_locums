@@ -36,4 +36,9 @@ class AppAssets {
   static const String directionRight = 'assets/icons/directionRight.svg';
   static const String directionUp = 'assets/icons/directionUp.svg';
   static const String switch2 = 'assets/icons/switch.svg';
+
+  static const String appbar = 'assets/images/appbar.png';
+
+  //Icons
+  static const String visibility = 'assets/icons/visibility.svg';
 }
