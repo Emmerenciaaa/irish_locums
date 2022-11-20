@@ -85,7 +85,7 @@ class _AuthStartPageState extends State<AuthStartPage> {
                     onTap: () {
                       Navigator.pushReplacementNamed(
                         context,
-                        RouteName.signin,
+                        RouteName.signupEmployeeUserAccount,
                       );
                     },
                     child: Container(
@@ -100,6 +100,36 @@ class _AuthStartPageState extends State<AuthStartPage> {
                           child: TextBody(
                             'Locum Sign-Up',
                             color: AppColors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                gapSmall,
+                gapTiny,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 42),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        RouteName.signupUserAccount,
+                      );
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      decoration:const BoxDecoration(
+                        color: AppColors.yellow,
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical:16),
+                          child: TextBody(
+                            'Employer Sign-Up',
+                            color: AppColors.black,
                             fontSize: 14,
                           ),
                         ),

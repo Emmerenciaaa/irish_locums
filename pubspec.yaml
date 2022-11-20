@@ -23,6 +23,8 @@ dependencies:
   gap: ^2.0.0
   flutter_svg: ^1.1.0
   dots_indicator: ^2.0.0
+  dotted_border: ^2.0.0+3
+  dropdown_formfield: ^0.1.4
 
 dev_dependencies:
   flutter_test:
@@ -39,4 +41,11 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+
 

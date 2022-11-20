@@ -5,9 +5,10 @@ import 'package:irish_locums/bootstrap.dart';
 
 
 void main() {
-  bootstrap(
-        () => DevicePreview(
-          builder: (context) => const App(),
-    ),
-  );
+  bootstrap(() => const App());
+  // bootstrap(
+  //       () => DevicePreview(
+  //         builder: (context) => const App(),
+  //   ),
+  // );
 }

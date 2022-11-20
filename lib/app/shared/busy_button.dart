@@ -8,11 +8,13 @@ class BusyButton extends StatelessWidget {
     required this.onTap,
     this.disabled = false,
     this.color = AppColors.primaryColor,
+    this.textColor=AppColors.white,
     this.borderRadius,
     Key? key,
   }) : super(key: key);
   final String title;
   final Color? color;
+  final Color? textColor;
   final VoidCallback onTap;
   final bool disabled;
   final BorderRadius? borderRadius;
@@ -30,7 +32,7 @@ class BusyButton extends StatelessWidget {
         child: Center(
           child: TextBody(
             title,
-            color: AppColors.white,
+            color: textColor,
             style: const TextStyle(
               decoration: TextDecoration.none,
             ),
