@@ -16,9 +16,9 @@ class App extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       title: 'Irish Locums',
       theme: AppTheme.themeData,
-
+      initialRoute: RouteName.signupAdditionalInfo,
       onGenerateRoute: onGenerateRoute,
-      initialRoute: RouteName.splashScreen,
+
     );
   }
 }

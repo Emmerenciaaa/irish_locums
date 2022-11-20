@@ -107,6 +107,36 @@ class _AuthStartPageState extends State<AuthStartPage> {
                     ),
                   ),
                 ),
+                gapSmall,
+                gapTiny,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 42),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        RouteName.signupUserAccount,
+                      );
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      decoration:const BoxDecoration(
+                        color: AppColors.yellow,
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical:16),
+                          child: TextBody(
+                            'Employer Sign-Up',
+                            color: AppColors.black,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 gapTiny,
                 gapSmall,
                 Row(
