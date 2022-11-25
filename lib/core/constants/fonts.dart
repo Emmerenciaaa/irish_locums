@@ -28,7 +28,6 @@ class IrishLocumsTextBase extends StatelessWidget {
       ).merge(style),
       textAlign: textAlign,
       overflow: overflow,
-      maxLines: maxLines,
     );
   }
 }

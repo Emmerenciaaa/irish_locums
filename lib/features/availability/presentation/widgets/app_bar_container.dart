@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
@@ -8,10 +9,15 @@ import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/core/constants/fonts.dart';
 
 class AppBarContainer extends StatefulWidget {
-  const AppBarContainer(
-      {super.key, required this.title, required this.subtitle});
+  const AppBarContainer({
+    super.key,
+    required this.title,
+    required this.subtitle,
+    this.showBackIcon = false,
+  });
   final String title;
   final String subtitle;
+  final bool showBackIcon;
   @override
   State<AppBarContainer> createState() => _AppBarContainerState();
 }
@@ -49,6 +55,25 @@ class _AppBarContainerState extends State<AppBarContainer> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
+                widget.showBackIcon
+                    ? Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Gap(30),
+                          InkWell(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Icon(
+                              Icons.arrow_back_ios,
+                              color: AppColors.white,
+                              size: 20,
+                            ),
+                          ),
+                          const Gap(17),
+                        ],
+                      )
+                    : const SizedBox(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,7 +121,7 @@ class _AppBarContainerState extends State<AppBarContainer> {
                     ),
                   ],
                 ),
-                const Gap(20),
+                const Gap(10)
               ],
             ),
           )

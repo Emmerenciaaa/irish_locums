@@ -13,7 +13,7 @@ class BusyButton extends StatelessWidget {
   final String title;
   final Color buttonColor;
   final VoidCallback onTap;
-  final textColor;
+  final Color textColor;
   @override
   Widget build(BuildContext context) {
     return InkWell(

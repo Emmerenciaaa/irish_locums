@@ -131,7 +131,7 @@ class _ShiftListingPageState extends State<ShiftListingPage> {
               ? const Expanded(child: ShiftListingWidget())
               : mapListing
                   ? const Expanded(child: MapListingViewWidget())
-                  : const CalenderViewWidget()
+                  : const Expanded(child: CalenderViewWidget())
         ],
       ),
     );

@@ -35,6 +35,11 @@ class AppColors {
   static const Color red600 = Color(0xffDC2626);
   static const Color black = Color(0xff000000);
   static const Color busyLight = Color(0xffB3D1E3);
+  static const Color primaryBlue = Color(0xffEBF3FF);
+  static const Color grey100 = Color(0xff8D8B93);
+  static const Color grey20 = Color(0xffE8E8E9);
+  static const Color grey50 = Color(0xffF9FAFB);
+  static const Color slate100 = Color(0xffF1F5F9);
 
   static const Map<int, Color> colorScratch = {
     50: Color.fromRGBO(7, 45, 114, .1),

@@ -4,19 +4,20 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:irish_locums/app/shared/busy_button.dart';
 import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/core/constants/fonts.dart';
+import 'package:irish_locums/features/home/presentation/widgets/widgets.dart';
 
-class CalenderFilterModal extends StatefulWidget {
-  const CalenderFilterModal({super.key});
+class MyLocationFilter extends StatefulWidget {
+  const MyLocationFilter({super.key});
 
   @override
-  State<CalenderFilterModal> createState() => _CalenderFilterModalState();
+  State<MyLocationFilter> createState() => _MyLocationFilterState();
 }
 
-class _CalenderFilterModalState extends State<CalenderFilterModal> {
+class _MyLocationFilterState extends State<MyLocationFilter> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.8,
+      height: MediaQuery.of(context).size.height * 0.75,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: AppColors.white,
@@ -89,16 +90,12 @@ class _CalenderFilterModalState extends State<CalenderFilterModal> {
                 child: Column(
                   children: const [
                     FilterItems(
-                      title: 'Pending',
+                      title: 'All',
                     ),
                     FilterItems(
-                      title: 'Vacancies',
+                      title: 'Subscribed',
                     ),
-                    FilterItems(title: 'Booked'),
-                    FilterItems(title: 'Completed'),
-                    FilterItems(
-                      title: 'Unverified',
-                    ),
+                    FilterItems(title: 'Not Subscribed'),
                   ],
                 ),
               ),
@@ -118,51 +115,6 @@ class _CalenderFilterModalState extends State<CalenderFilterModal> {
               const Gap(50)
             ],
           )
-        ],
-      ),
-    );
-  }
-}
-
-class FilterItems extends StatefulWidget {
-  const FilterItems({
-    super.key,
-    required this.title,
-  });
-  final String title;
-
-  @override
-  State<FilterItems> createState() => _FilterItemsState();
-}
-
-bool isChecked = false;
-
-class _FilterItemsState extends State<FilterItems> {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 24),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          TextBody(
-            widget.title,
-            color: AppColors.grey900,
-            fontSize: 14,
-          ),
-          SizedBox(
-            height: 15,
-            width: 15,
-            child: Checkbox(
-              shape: const CircleBorder(),
-              value: isChecked,
-              onChanged: (value) {
-                setState(() {
-                  isChecked = !isChecked;
-                });
-              },
-            ),
-          ),
         ],
       ),
     );

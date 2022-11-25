@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:irish_locums/core/constants/app_theme.dart';
 import 'package:irish_locums/core/navigators/route_name.dart';

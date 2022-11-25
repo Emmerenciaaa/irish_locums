@@ -5,6 +5,7 @@ import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/features/availability/presentation/pages/availabilty_page.dart';
 import 'package:irish_locums/features/home/presentation/pages/branches/branches_screen.dart';
 import 'package:irish_locums/features/home/presentation/pages/jobs/jobs_screen.dart';
+import 'package:irish_locums/features/home/presentation/pages/more/more_page.dart';
 import 'package:irish_locums/features/home/presentation/pages/shift_listing_page.dart';
 
 class AppNavBar extends StatefulWidget {
@@ -21,7 +22,7 @@ class _AppNavBarState extends State<AppNavBar> {
     const AvailabilityPage(),
     const BranchesScreen(),
     const JobsScreen(),
-    Container(),
+    const MorePage(),
   ];
   @override
   Widget build(BuildContext context) {

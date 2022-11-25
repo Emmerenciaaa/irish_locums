@@ -26,6 +26,10 @@ dependencies:
   readmore: ^2.2.0
   dotted_border: ^2.0.0+3
   dropdown_formfield: ^0.1.4
+  percent_indicator: ^4.2.2
+  calendar_agenda: ^0.0.2+3
+  table_calendar: ^3.0.8
+  syncfusion_flutter_datepicker: ^20.3.58
 
 dev_dependencies:
   flutter_test:

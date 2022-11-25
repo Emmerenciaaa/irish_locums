@@ -11,7 +11,7 @@ class LoadingBranches extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 15),
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.65,
+        height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
           color: AppColors.white,

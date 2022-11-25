@@ -21,4 +21,17 @@ class RouteName {
   static const String signupEmployeeResumeSecond =
       '/signupEmployeeResumeSecond';
   static const String signupEmployeeUpload = '/signupEmployeeUpload';
+  static const String morePage = '/more_screen';
+  static const String profilePage = '/profile_page';
+  static const String changePasswordScreen = '/show_password_page';
+  static const String settingScreen = '/setting_screen';
+  static const String faqsScreen = '/faq_screen';
+  static const String cpdScreen = 'cpd_screen';
+  static const String cdpReadMorePage = '/cdp_readMore';
+  static const String myDocumentScreen = '/my_document_screen';
+  static const String myLocationScreenn = '/my_location_screen';
+  static const String referralScreen = '/referral_screen';
+  static const String myApplicationScreen = '/my_application_screen';
+  static const String viewMyApplicationWidget = '/view_my_appliaction';
+  static const String myBookmarkScreen = '/my_bookmark_screen';
 }

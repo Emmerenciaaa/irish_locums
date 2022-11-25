@@ -11,6 +11,11 @@ class AppAssets {
   static const String clinicImage = 'assets/images/clinicImg.png';
   static const String map = 'assets/images/maps.png';
   static const String clinic2 = 'assets/images/clinic2.jpg';
+  static const String cdpImg = 'assets/images/cpdImage.png';
+  static const String docImg = 'assets/images/docIcon.png';
+  static const String referralImg = 'assets/images/referralImg.png';
+  static const String folderIcon = 'assets/images/folderIcon.png';
+  static const String bookmarkImg = 'assets/images/bookmarkImg.png';
 
   //Icons
   static const String forwardArrow = 'assets/icons/forward.svg';
@@ -36,9 +41,17 @@ class AppAssets {
   static const String directionRight = 'assets/icons/directionRight.svg';
   static const String directionUp = 'assets/icons/directionUp.svg';
   static const String switch2 = 'assets/icons/switch.svg';
-
   static const String appbar = 'assets/images/appbar.png';
-
-  //Icons
   static const String visibility = 'assets/icons/visibility.svg';
+  static const String cpdIcon = 'assets/icons/cpdIcon.svg';
+  static const String documentIcon = 'assets/icons/documentIcon.svg';
+  static const String profileIcon = 'assets/icons/profileIcon.svg';
+  static const String faqIcon = 'assets/icons/faqIcon.svg';
+  static const String referralIcon = 'assets/icons/referralIcon.svg';
+  static const String settingIcon = 'assets/icons/settingIcon.svg';
+  static const String shoppingIcon = 'assets/icons/shoppingIcon.svg';
+  static const String loginnIcon = 'assets/icons/loginIcon.svg';
+  static const String editIcon = 'assets/icons/editIcon.svg';
+  static const String viewIconn = 'assets/icons/viewIcon.svg';
+  static const String deleteIconn = 'assets/icons/deleteIcon.svg';
 }
