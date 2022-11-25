@@ -16,7 +16,6 @@ class SecondResume extends StatefulWidget {
 }
 
 class _SecondResumeState extends State<SecondResume> {
-
   bool isChecked = false;
 
   Color getColor(Set<MaterialState> states) {
@@ -34,10 +33,10 @@ class _SecondResumeState extends State<SecondResume> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body:Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
@@ -106,7 +105,7 @@ class _SecondResumeState extends State<SecondResume> {
                           Checkbox(
                             value: isChecked,
                             fillColor:
-                            MaterialStateProperty.resolveWith(getColor),
+                                MaterialStateProperty.resolveWith(getColor),
                             onChanged: (bool? value) {
                               setState(() {
                                 isChecked = value!;
@@ -123,7 +122,6 @@ class _SecondResumeState extends State<SecondResume> {
                         ],
                       ),
                       gapLarge,
-
                     ],
                   ),
                   Padding(
@@ -133,7 +131,7 @@ class _SecondResumeState extends State<SecondResume> {
                       children: [
                         BusyButton(
                           title: 'Next',
-                          color: AppColors.yellow,
+                          buttonColor: AppColors.yellow,
                           textColor: AppColors.black,
                           onTap: () {
                             Navigator.pushReplacementNamed(
@@ -150,63 +148,56 @@ class _SecondResumeState extends State<SecondResume> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.dotColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.dotColor),
+                              child: const Text(''),
                             ),
                           ],
                         )
@@ -217,7 +208,6 @@ class _SecondResumeState extends State<SecondResume> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }

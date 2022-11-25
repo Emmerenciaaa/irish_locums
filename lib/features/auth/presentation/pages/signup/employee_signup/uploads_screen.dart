@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:irish_locums/app/shared/app_bar.dart';
 import 'package:irish_locums/app/shared/busy_button.dart';
-import 'package:irish_locums/app/shared/input_field.dart';
 import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/core/constants/fonts.dart';
 import 'package:irish_locums/core/constants/ui_helpers.dart';
@@ -16,7 +15,6 @@ class EmployeeUploads extends StatefulWidget {
 }
 
 class _EmployeeUploadsState extends State<EmployeeUploads> {
-
   bool isChecked = false;
 
   Color getColor(Set<MaterialState> states) {
@@ -34,10 +32,10 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body:Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
@@ -87,7 +85,7 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
                           Checkbox(
                             value: isChecked,
                             fillColor:
-                            MaterialStateProperty.resolveWith(getColor),
+                                MaterialStateProperty.resolveWith(getColor),
                             onChanged: (bool? value) {
                               setState(() {
                                 isChecked = value!;
@@ -104,9 +102,7 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
                               children: <TextSpan>[
                                 TextSpan(
                                   text: 'I agree to the ',
-                                  style: TextStyle(
-                                      fontSize: 12
-                                  ),
+                                  style: TextStyle(fontSize: 12),
                                 ),
                                 TextSpan(
                                     text: 'Terms and Conditions',
@@ -121,7 +117,6 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
                         ],
                       ),
                       gapLarge,
-
                     ],
                   ),
                   Padding(
@@ -131,12 +126,12 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
                       children: [
                         BusyButton(
                           title: 'Create Account',
-                          color: AppColors.secondaryColor,
+                          buttonColor: AppColors.secondaryColor,
                           textColor: AppColors.white,
                           onTap: () {
                             Navigator.pushReplacementNamed(
                               context,
-                              RouteName.authStartPage,
+                              RouteName.appNavPage,
                             );
                           },
                         ),
@@ -148,8 +143,7 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -157,8 +151,7 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -166,8 +159,7 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -175,8 +167,7 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -184,8 +175,7 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -193,8 +183,7 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -202,8 +191,7 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: const Text(''),
                             ),
                           ],
@@ -215,7 +203,6 @@ class _EmployeeUploadsState extends State<EmployeeUploads> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }

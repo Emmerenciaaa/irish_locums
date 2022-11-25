@@ -7,6 +7,7 @@ import 'package:irish_locums/core/constants/app_asset.dart';
 import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/core/constants/fonts.dart';
 import 'package:irish_locums/core/constants/ui_helpers.dart';
+import 'package:irish_locums/core/navigators/route_name.dart';
 
 class Signin extends StatefulWidget {
   const Signin({Key? key}) : super(key: key);
@@ -19,14 +20,17 @@ class _SigninState extends State<Signin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
-      backgroundColor: AppColors.white,
+        resizeToAvoidBottomInset: false,
+        backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body:Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
-              height: MediaQuery.of(context).size.height-MediaQuery.of(context).padding.top- MediaQuery.of(context).padding.top-44,
+              height: MediaQuery.of(context).size.height -
+                  MediaQuery.of(context).padding.top -
+                  MediaQuery.of(context).padding.top -
+                  44,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,7 +41,7 @@ class _SigninState extends State<Signin> {
                       gapMedium,
                       gapSmall,
                       H1(
-                          'Sign-In',
+                        'Sign-In',
                         color: AppColors.black,
                       ),
                       gapLarge,
@@ -49,8 +53,8 @@ class _SigninState extends State<Signin> {
                         fontSize: 14,
                       ),
                       const InputField(
-                          controller: null,
-                          placeholder: 'Patricktj@gmail.com',
+                        controller: null,
+                        placeholder: 'Patricktj@gmail.com',
                         placeholderColor: AppColors.borderColor,
                       ),
                       gapLarge,
@@ -59,12 +63,11 @@ class _SigninState extends State<Signin> {
                         color: AppColors.black,
                         fontSize: 14,
                       ),
-                       InputField(
+                      InputField(
                         controller: null,
                         placeholder: '**********',
                         placeholderColor: AppColors.borderColor,
-                        suffix: SvgPicture.asset(
-                            AppAssets.visibility),
+                        suffix: SvgPicture.asset(AppAssets.visibility),
                       ),
                       gapTiny,
                       TextBody(
@@ -72,7 +75,6 @@ class _SigninState extends State<Signin> {
                         color: AppColors.yellow,
                         fontSize: 14,
                       ),
-
                     ],
                   ),
                   Column(
@@ -80,9 +82,11 @@ class _SigninState extends State<Signin> {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 120),
                         child: BusyButton(
-                            title: 'Sign-In',
-                            color: AppColors.secondaryColor,
-                            onTap: (){},
+                          title: 'Sign-In',
+                          buttonColor: AppColors.secondaryColor,
+                          onTap: () {
+                            Navigator.pushNamed(context, RouteName.appNavPage);
+                          },
                         ),
                       )
                     ],
@@ -91,7 +95,6 @@ class _SigninState extends State<Signin> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }

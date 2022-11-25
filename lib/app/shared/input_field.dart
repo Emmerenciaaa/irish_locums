@@ -94,10 +94,10 @@ class _InputFieldState extends State<InputField> {
                 child: GestureDetector(
                   onTap: widget.showLabel
                       ? () {
-                    setState(() {
-                      activiateLabe = true;
-                    });
-                  }
+                          setState(() {
+                            activiateLabe = true;
+                          });
+                        }
                       : null,
                   child: Container(
                     height: widget.height,
@@ -116,16 +116,16 @@ class _InputFieldState extends State<InputField> {
                           child: TextField(
                             onTap: widget.showLabel
                                 ? () {
-                              setState(() {
-                                activiateLabe = true;
-                              });
-                              if (widget.enterPressed != null) {
-                                FocusScope.of(context)
-                                    .requestFocus(FocusNode());
-                                // ignore: avoid_dynamic_calls
-                                widget.enterPressed!();
-                              }
-                            }
+                                    setState(() {
+                                      activiateLabe = true;
+                                    });
+                                    if (widget.enterPressed != null) {
+                                      FocusScope.of(context)
+                                          .requestFocus(FocusNode());
+                                      // ignore: avoid_dynamic_calls
+                                      widget.enterPressed!();
+                                    }
+                                  }
                                 : null,
                             controller: widget.controller,
                             keyboardType: widget.textInputType,
@@ -160,23 +160,23 @@ class _InputFieldState extends State<InputField> {
                               }),
                               child: widget.password
                                   ? Container(
-                                width: 30,
-                                height: 30,
-                                alignment: Alignment.center,
-                                child: isPassword
-                                    ? SvgPicture.asset(
-                                    AppAssets.visibility)
-                                    : const Icon(
-                                  Icons.visibility_off_outlined,
-                                  color: Color(0xff71759D),
-                                  size: 25,
-                                ),
-                              )
+                                      width: 30,
+                                      height: 30,
+                                      alignment: Alignment.center,
+                                      child: isPassword
+                                          ? SvgPicture.asset(
+                                              AppAssets.visibility)
+                                          : const Icon(
+                                              Icons.visibility_off_outlined,
+                                              color: Color(0xff71759D),
+                                              size: 25,
+                                            ),
+                                    )
                                   : Container(
-                                width: 30,
-                                height: 30,
-                                alignment: Alignment.center,
-                              ),
+                                      width: 30,
+                                      height: 30,
+                                      alignment: Alignment.center,
+                                    ),
                             ),
                       ],
                     ),
@@ -188,18 +188,18 @@ class _InputFieldState extends State<InputField> {
                   padding: const EdgeInsets.only(left: 10),
                   child: activiateLabe
                       ? Container(
-                    //check here
-                    color: AppColors.dotColor,
-                    child: SizedBox(
-                      child: TextBody(
-                        ' ${widget.label} ',
-                        fontSize: 12,
-                        color: widget.fieldFocusNode != null
-                            ? AppColors.primaryColor
-                            : widget.labelTextColor,
-                      ),
-                    ),
-                  )
+                          //check here
+                          color: AppColors.dotColor,
+                          child: SizedBox(
+                            child: TextBody(
+                              ' ${widget.label} ',
+                              fontSize: 12,
+                              color: widget.fieldFocusNode != null
+                                  ? AppColors.primaryColor
+                                  : widget.labelTextColor,
+                            ),
+                          ),
+                        )
                       : const SizedBox(),
                 )
               else

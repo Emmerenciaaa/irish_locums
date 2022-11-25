@@ -18,14 +18,14 @@ class _SignupCompanyState extends State<SignupCompany> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body:Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
-             // height: MediaQuery.of(context).size.height-MediaQuery.of(context).padding.top- MediaQuery.of(context).padding.top-44,
+              // height: MediaQuery.of(context).size.height-MediaQuery.of(context).padding.top- MediaQuery.of(context).padding.top-44,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -85,7 +85,6 @@ class _SignupCompanyState extends State<SignupCompany> {
                         placeholder: 'https://',
                         placeholderColor: AppColors.borderColor,
                       ),
-
                     ],
                   ),
                   Padding(
@@ -95,7 +94,7 @@ class _SignupCompanyState extends State<SignupCompany> {
                       children: [
                         BusyButton(
                           title: 'Next',
-                          color: AppColors.yellow,
+                          buttonColor: AppColors.yellow,
                           textColor: AppColors.black,
                           onTap: () {
                             Navigator.pushReplacementNamed(
@@ -112,8 +111,7 @@ class _SignupCompanyState extends State<SignupCompany> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -121,8 +119,7 @@ class _SignupCompanyState extends State<SignupCompany> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -130,8 +127,7 @@ class _SignupCompanyState extends State<SignupCompany> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -139,8 +135,7 @@ class _SignupCompanyState extends State<SignupCompany> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -148,8 +143,7 @@ class _SignupCompanyState extends State<SignupCompany> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: Text(''),
                             ),
                           ],
@@ -161,7 +155,6 @@ class _SignupCompanyState extends State<SignupCompany> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }

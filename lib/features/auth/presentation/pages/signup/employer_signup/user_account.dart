@@ -9,7 +9,6 @@ import 'package:irish_locums/core/constants/fonts.dart';
 import 'package:irish_locums/core/constants/ui_helpers.dart';
 import 'package:irish_locums/core/navigators/route_name.dart';
 
-
 class SignupUserAccount extends StatefulWidget {
   const SignupUserAccount({Key? key}) : super(key: key);
 
@@ -21,14 +20,14 @@ class _SignupUserAccountState extends State<SignupUserAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body:Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
-             // height: MediaQuery.of(context).size.height-MediaQuery.of(context).padding.top- MediaQuery.of(context).padding.top-44,
+              // height: MediaQuery.of(context).size.height-MediaQuery.of(context).padding.top- MediaQuery.of(context).padding.top-44,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -74,8 +73,7 @@ class _SignupUserAccountState extends State<SignupUserAccount> {
                         controller: null,
                         placeholder: '**********',
                         placeholderColor: AppColors.borderColor,
-                        suffix: SvgPicture.asset(
-                            AppAssets.visibility),
+                        suffix: SvgPicture.asset(AppAssets.visibility),
                       ),
                       gapTiny,
                       TextBody(
@@ -96,11 +94,9 @@ class _SignupUserAccountState extends State<SignupUserAccount> {
                         controller: null,
                         placeholder: '**********',
                         placeholderColor: AppColors.borderColor,
-                        suffix: SvgPicture.asset(
-                            AppAssets.visibility),
+                        suffix: SvgPicture.asset(AppAssets.visibility),
                       ),
                       gapMedium,
-
                     ],
                   ),
                   Padding(
@@ -110,7 +106,7 @@ class _SignupUserAccountState extends State<SignupUserAccount> {
                       children: [
                         BusyButton(
                           title: 'Next',
-                          color: AppColors.yellow,
+                          buttonColor: AppColors.yellow,
                           textColor: AppColors.black,
                           onTap: () {
                             Navigator.pushReplacementNamed(
@@ -127,8 +123,7 @@ class _SignupUserAccountState extends State<SignupUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -136,8 +131,7 @@ class _SignupUserAccountState extends State<SignupUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -145,8 +139,7 @@ class _SignupUserAccountState extends State<SignupUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -154,8 +147,7 @@ class _SignupUserAccountState extends State<SignupUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -163,8 +155,7 @@ class _SignupUserAccountState extends State<SignupUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                           ],
@@ -176,7 +167,6 @@ class _SignupUserAccountState extends State<SignupUserAccount> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }

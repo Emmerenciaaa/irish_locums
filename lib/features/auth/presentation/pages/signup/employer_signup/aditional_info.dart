@@ -130,16 +130,14 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
                                 color: AppColors.textGrey,
                               ),
                               children: <TextSpan>[
-                                 TextSpan(
-                                     text: 'I agree to the ',
-                                   style: TextStyle(
-                                     fontSize: 12
-                                   ),
-                                 ),
-                                 TextSpan(
+                                TextSpan(
+                                  text: 'I agree to the ',
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                                TextSpan(
                                     text: 'Terms and Conditions',
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.bold,
                                       color: AppColors.yellow,
                                       fontSize: 12,
                                     )),
@@ -158,7 +156,7 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
                       children: [
                         BusyButton(
                           title: 'Create Account',
-                          color: AppColors.secondaryColor,
+                          buttonColor: AppColors.secondaryColor,
                           textColor: AppColors.white,
                           onTap: () {
                             Navigator.pushReplacementNamed(

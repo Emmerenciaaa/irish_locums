@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:irish_locums/app/shared/app_bar.dart';
 import 'package:irish_locums/app/shared/busy_button.dart';
-import 'package:irish_locums/app/shared/input_field.dart';
 import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/core/constants/fonts.dart';
 import 'package:irish_locums/core/constants/ui_helpers.dart';
@@ -19,10 +18,10 @@ class _SignupUserUploadsState extends State<SignupUserUploads> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body:Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
@@ -63,7 +62,7 @@ class _SignupUserUploadsState extends State<SignupUserUploads> {
                         fontSize: 14,
                       ),
                       gapSmall,
-                    const UploadWidget(),
+                      const UploadWidget(),
                       gapLarge,
                     ],
                   ),
@@ -74,7 +73,7 @@ class _SignupUserUploadsState extends State<SignupUserUploads> {
                       children: [
                         BusyButton(
                           title: 'Next',
-                          color: AppColors.yellow,
+                          buttonColor: AppColors.yellow,
                           textColor: AppColors.black,
                           onTap: () {
                             Navigator.pushReplacementNamed(
@@ -91,45 +90,40 @@ class _SignupUserUploadsState extends State<SignupUserUploads> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.dotColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.dotColor),
+                              child: const Text(''),
                             ),
                           ],
                         )
@@ -140,7 +134,6 @@ class _SignupUserUploadsState extends State<SignupUserUploads> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }

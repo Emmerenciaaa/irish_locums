@@ -15,16 +15,22 @@ class Resume extends StatefulWidget {
 }
 
 class _ResumeState extends State<Resume> {
-
-  final _category = ['DOCTOR','HEALTHCARE ASSISTANT','NURSE','PHARMACIST','PHARMACY TECHNICIAN','SOCIAL CARE WORKER'];
+  final _category = [
+    'DOCTOR',
+    'HEALTHCARE ASSISTANT',
+    'NURSE',
+    'PHARMACIST',
+    'PHARMACY TECHNICIAN',
+    'SOCIAL CARE WORKER'
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-        resizeToAvoidBottomInset : false,
+    return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body:Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
@@ -64,17 +70,16 @@ class _ResumeState extends State<Resume> {
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: DropdownButtonFormField(
-                            decoration: const InputDecoration(
-                                border:InputBorder.none
-                            ),
+                            decoration:
+                                const InputDecoration(border: InputBorder.none),
                             dropdownColor: AppColors.backgroundLightBlue,
-                            onChanged: (val){},
-                            items: _category.map(
-                                    (e){
-                                  return DropdownMenuItem(value: e,child: Text(e),);
-                                }
-                            ).toList(),
-
+                            onChanged: (val) {},
+                            items: _category.map((e) {
+                              return DropdownMenuItem(
+                                value: e,
+                                child: Text(e),
+                              );
+                            }).toList(),
                           ),
                         ),
                       ),
@@ -98,9 +103,7 @@ class _ResumeState extends State<Resume> {
                             TextSpan(
                               text: 'NOTE ',
                               style: TextStyle(
-                                  fontSize: 12,
-                                fontWeight: FontWeight.bold
-                              ),
+                                  fontSize: 12, fontWeight: FontWeight.bold),
                             ),
                             TextSpan(
                                 text: 'This will be visible to ALL employers',
@@ -113,7 +116,6 @@ class _ResumeState extends State<Resume> {
                         ),
                       ),
                       gapLarge,
-
                     ],
                   ),
                   Padding(
@@ -123,7 +125,7 @@ class _ResumeState extends State<Resume> {
                       children: [
                         BusyButton(
                           title: 'Next',
-                          color: AppColors.yellow,
+                          buttonColor: AppColors.yellow,
                           textColor: AppColors.black,
                           onTap: () {
                             Navigator.pushReplacementNamed(
@@ -140,63 +142,56 @@ class _ResumeState extends State<Resume> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.indicatorActiveColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.dotColor),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
-                              child: Text(''),
+                                  color: AppColors.dotColor),
+                              child: const Text(''),
                             ),
                           ],
                         )
@@ -207,7 +202,6 @@ class _ResumeState extends State<Resume> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }

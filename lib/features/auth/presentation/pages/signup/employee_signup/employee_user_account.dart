@@ -20,10 +20,10 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body:Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
@@ -73,8 +73,7 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
                         controller: null,
                         placeholder: '**********',
                         placeholderColor: AppColors.borderColor,
-                        suffix: SvgPicture.asset(
-                            AppAssets.visibility),
+                        suffix: SvgPicture.asset(AppAssets.visibility),
                       ),
                       gapTiny,
                       TextBody(
@@ -95,11 +94,9 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
                         controller: null,
                         placeholder: '**********',
                         placeholderColor: AppColors.borderColor,
-                        suffix: SvgPicture.asset(
-                            AppAssets.visibility),
+                        suffix: SvgPicture.asset(AppAssets.visibility),
                       ),
                       gapLarge,
-
                     ],
                   ),
                   Padding(
@@ -109,7 +106,7 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
                       children: [
                         BusyButton(
                           title: 'Next',
-                          color: AppColors.yellow,
+                          buttonColor: AppColors.yellow,
                           textColor: AppColors.black,
                           onTap: () {
                             Navigator.pushReplacementNamed(
@@ -126,8 +123,7 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -135,8 +131,7 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -144,8 +139,7 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -153,8 +147,7 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -162,8 +155,7 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -171,8 +163,7 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -180,8 +171,7 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                           ],
@@ -193,7 +183,6 @@ class _EmployeeUserAccountState extends State<EmployeeUserAccount> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }

@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:irish_locums/core/constants/app_asset.dart';
 import 'package:irish_locums/core/constants/app_color.dart';
@@ -19,10 +20,10 @@ class _AuthStartPageState extends State<AuthStartPage> {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(AppAssets.background),
-                fit: BoxFit.cover,
-            ),
+          image: DecorationImage(
+            image: AssetImage(AppAssets.background),
+            fit: BoxFit.cover,
+          ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,11 +54,11 @@ class _AuthStartPageState extends State<AuthStartPage> {
                   top: 65,
                   right: 40,
                   child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 0),
-                   child: Image(
-                     image: AssetImage(AppAssets.logo),
+                    padding: EdgeInsets.symmetric(horizontal: 0),
+                    child: Image(
+                      image: AssetImage(AppAssets.logo),
+                    ),
                   ),
-              ),
                 ),
               ],
             ),
@@ -90,13 +91,13 @@ class _AuthStartPageState extends State<AuthStartPage> {
                     },
                     child: Container(
                       width: double.infinity,
-                      decoration:const BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: AppColors.secondaryColor,
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
                       child: Center(
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical:16),
+                          padding: const EdgeInsets.symmetric(vertical: 16),
                           child: TextBody(
                             'Locum Sign-Up',
                             color: AppColors.white,
@@ -120,13 +121,13 @@ class _AuthStartPageState extends State<AuthStartPage> {
                     },
                     child: Container(
                       width: double.infinity,
-                      decoration:const BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: AppColors.yellow,
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
                       child: Center(
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical:16),
+                          padding: const EdgeInsets.symmetric(vertical: 16),
                           child: TextBody(
                             'Employer Sign-Up',
                             color: AppColors.black,
@@ -143,25 +144,26 @@ class _AuthStartPageState extends State<AuthStartPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     RichText(
-                      text: const TextSpan(
-                          text:'Already have an account?  ',
-                          style: TextStyle(
+                      text: TextSpan(
+                          text: 'Already have an account?  ',
+                          style: const TextStyle(
                             color: AppColors.white,
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
                           ),
                           children: [
                             TextSpan(
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () => Navigator.pushNamed(
+                                    context, RouteName.signin),
                               text: 'Login',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: AppColors.primaryColor,
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400,
                               ),
                             )
-
-                          ]
-                      ),
+                          ]),
                     )
                   ],
                 ),

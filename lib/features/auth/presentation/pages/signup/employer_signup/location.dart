@@ -15,20 +15,19 @@ class SignupUserLocation extends StatefulWidget {
 }
 
 class _SignupUserLocationState extends State<SignupUserLocation> {
-
-  _SignupUserLocationState(){
+  _SignupUserLocationState() {
     selected = '';
   }
 
-  final _countyDropdown = ['Antrim','Armagh','Carlow'];
-  String selected ='';
+  final _countyDropdown = ['Antrim', 'Armagh', 'Carlow'];
+  String selected = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body:Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
@@ -77,22 +76,21 @@ class _SignupUserLocationState extends State<SignupUserLocation> {
                       gapTiny,
                       Container(
                         decoration: BoxDecoration(
-                            border: Border.all(color: AppColors.borderColor),
+                          border: Border.all(color: AppColors.borderColor),
                         ),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: DropdownButtonFormField(
-                            decoration: const InputDecoration(
-                              border:InputBorder.none
-                            ),
+                            decoration:
+                                const InputDecoration(border: InputBorder.none),
                             dropdownColor: AppColors.backgroundLightBlue,
-                            onChanged: (val){},
-                            items: _countyDropdown.map(
-                                (e){
-                                  return DropdownMenuItem(value: e,child: Text(e),);
-                                }
-                            ).toList(),
-
+                            onChanged: (val) {},
+                            items: _countyDropdown.map((e) {
+                              return DropdownMenuItem(
+                                value: e,
+                                child: Text(e),
+                              );
+                            }).toList(),
                           ),
                         ),
                       ),
@@ -109,7 +107,6 @@ class _SignupUserLocationState extends State<SignupUserLocation> {
                         placeholderColor: AppColors.borderColor,
                       ),
                       gapLarge,
-
                     ],
                   ),
                   Padding(
@@ -119,7 +116,7 @@ class _SignupUserLocationState extends State<SignupUserLocation> {
                       children: [
                         BusyButton(
                           title: 'Next',
-                          color: AppColors.yellow,
+                          buttonColor: AppColors.yellow,
                           textColor: AppColors.black,
                           onTap: () {
                             Navigator.pushReplacementNamed(
@@ -136,8 +133,7 @@ class _SignupUserLocationState extends State<SignupUserLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -145,8 +141,7 @@ class _SignupUserLocationState extends State<SignupUserLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -154,8 +149,7 @@ class _SignupUserLocationState extends State<SignupUserLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -163,8 +157,7 @@ class _SignupUserLocationState extends State<SignupUserLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -172,8 +165,7 @@ class _SignupUserLocationState extends State<SignupUserLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: Text(''),
                             ),
                           ],
@@ -185,9 +177,6 @@ class _SignupUserLocationState extends State<SignupUserLocation> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
-
-
 }

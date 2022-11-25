@@ -15,17 +15,16 @@ class EmployeeLocation extends StatefulWidget {
 }
 
 class _EmployeeLocationState extends State<EmployeeLocation> {
-
-  final _countyDropdown = ['Antrim','Armagh','Carlow'];
-  final _willingToRelocate = ['Yes','No'];
+  final _countyDropdown = ['Antrim', 'Armagh', 'Carlow'];
+  final _willingToRelocate = ['Yes', 'No'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body:Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
@@ -79,17 +78,16 @@ class _EmployeeLocationState extends State<EmployeeLocation> {
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: DropdownButtonFormField(
-                            decoration: const InputDecoration(
-                                border:InputBorder.none
-                            ),
+                            decoration:
+                                const InputDecoration(border: InputBorder.none),
                             dropdownColor: AppColors.backgroundLightBlue,
-                            onChanged: (val){},
-                            items: _countyDropdown.map(
-                                    (e){
-                                  return DropdownMenuItem(value: e,child: Text(e),);
-                                }
-                            ).toList(),
-
+                            onChanged: (val) {},
+                            items: _countyDropdown.map((e) {
+                              return DropdownMenuItem(
+                                value: e,
+                                child: Text(e),
+                              );
+                            }).toList(),
                           ),
                         ),
                       ),
@@ -108,22 +106,20 @@ class _EmployeeLocationState extends State<EmployeeLocation> {
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: DropdownButtonFormField(
-                            decoration: const InputDecoration(
-                                border:InputBorder.none
-                            ),
+                            decoration:
+                                const InputDecoration(border: InputBorder.none),
                             dropdownColor: AppColors.backgroundLightBlue,
-                            onChanged: (val){},
-                            items: _willingToRelocate.map(
-                                    (e){
-                                  return DropdownMenuItem(value: e,child: Text(e),);
-                                }
-                            ).toList(),
-
+                            onChanged: (val) {},
+                            items: _willingToRelocate.map((e) {
+                              return DropdownMenuItem(
+                                value: e,
+                                child: Text(e),
+                              );
+                            }).toList(),
                           ),
                         ),
                       ),
                       gapLarge,
-
                     ],
                   ),
                   Padding(
@@ -133,7 +129,7 @@ class _EmployeeLocationState extends State<EmployeeLocation> {
                       children: [
                         BusyButton(
                           title: 'Next',
-                          color: AppColors.yellow,
+                          buttonColor: AppColors.yellow,
                           textColor: AppColors.black,
                           onTap: () {
                             Navigator.pushReplacementNamed(
@@ -150,8 +146,7 @@ class _EmployeeLocationState extends State<EmployeeLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -159,8 +154,7 @@ class _EmployeeLocationState extends State<EmployeeLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -168,8 +162,7 @@ class _EmployeeLocationState extends State<EmployeeLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -177,8 +170,7 @@ class _EmployeeLocationState extends State<EmployeeLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -186,8 +178,7 @@ class _EmployeeLocationState extends State<EmployeeLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -195,8 +186,7 @@ class _EmployeeLocationState extends State<EmployeeLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -204,8 +194,7 @@ class _EmployeeLocationState extends State<EmployeeLocation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                           ],
@@ -217,7 +206,6 @@ class _EmployeeLocationState extends State<EmployeeLocation> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }

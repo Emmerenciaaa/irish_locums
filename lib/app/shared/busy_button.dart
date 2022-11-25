@@ -1,40 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/core/constants/fonts.dart';
 
 class BusyButton extends StatelessWidget {
-  const BusyButton({
-    required this.title,
-    required this.onTap,
-    this.disabled = false,
-    this.color = AppColors.primaryColor,
-    this.textColor=AppColors.white,
-    this.borderRadius,
-    Key? key,
-  }) : super(key: key);
+  const BusyButton(
+      {super.key,
+      required this.title,
+      this.buttonColor = AppColors.secondaryColor,
+      this.textColor = AppColors.white,
+      required this.onTap});
   final String title;
-  final Color? color;
-  final Color? textColor;
+  final Color buttonColor;
   final VoidCallback onTap;
-  final bool disabled;
-  final BorderRadius? borderRadius;
+  final Color textColor;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: disabled ? null : onTap,
+    return InkWell(
+      onTap: onTap,
       child: Container(
         height: 50,
         width: double.infinity,
         decoration: BoxDecoration(
-          borderRadius: borderRadius ?? BorderRadius.circular(5),
-          color: disabled ? AppColors.busyLight : color,
+          borderRadius: BorderRadius.circular(8),
+          color: buttonColor,
         ),
         child: Center(
           child: TextBody(
             title,
-            color: textColor,
-            style: const TextStyle(
-              decoration: TextDecoration.none,
+            style: GoogleFonts.roboto(
+              fontSize: 14,
+              color: textColor,
             ),
           ),
         ),

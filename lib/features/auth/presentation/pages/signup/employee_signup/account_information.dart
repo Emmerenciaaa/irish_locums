@@ -18,10 +18,10 @@ class _AccountInformationState extends State<AccountInformation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppColors.white,
         appBar: const IrishAppBar(),
-        body:Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             child: SizedBox(
@@ -122,7 +122,7 @@ class _AccountInformationState extends State<AccountInformation> {
                       children: [
                         BusyButton(
                           title: 'Next',
-                          color: AppColors.yellow,
+                          buttonColor: AppColors.yellow,
                           textColor: AppColors.black,
                           onTap: () {
                             Navigator.pushReplacementNamed(
@@ -139,8 +139,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -148,8 +147,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.indicatorActiveColor
-                              ),
+                                  color: AppColors.indicatorActiveColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -157,8 +155,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -166,8 +163,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -175,8 +171,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: Text(''),
                             ),
                             gapTiny,
@@ -184,8 +179,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                             gapTiny,
@@ -193,8 +187,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               width: 22,
                               height: 5,
                               decoration: const BoxDecoration(
-                                  color:AppColors.dotColor
-                              ),
+                                  color: AppColors.dotColor),
                               child: const Text(''),
                             ),
                           ],
@@ -206,7 +199,6 @@ class _AccountInformationState extends State<AccountInformation> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }
