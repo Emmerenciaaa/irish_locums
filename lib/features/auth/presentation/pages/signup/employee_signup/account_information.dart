@@ -140,7 +140,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               height: 5,
                               decoration: const BoxDecoration(
                                   color: AppColors.indicatorActiveColor),
-                              child: Text(''),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
@@ -148,7 +148,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               height: 5,
                               decoration: const BoxDecoration(
                                   color: AppColors.indicatorActiveColor),
-                              child: Text(''),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
@@ -156,7 +156,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               height: 5,
                               decoration: const BoxDecoration(
                                   color: AppColors.dotColor),
-                              child: Text(''),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
@@ -164,7 +164,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               height: 5,
                               decoration: const BoxDecoration(
                                   color: AppColors.dotColor),
-                              child: Text(''),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
@@ -172,7 +172,7 @@ class _AccountInformationState extends State<AccountInformation> {
                               height: 5,
                               decoration: const BoxDecoration(
                                   color: AppColors.dotColor),
-                              child: Text(''),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(

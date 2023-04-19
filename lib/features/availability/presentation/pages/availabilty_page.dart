@@ -4,7 +4,6 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:irish_locums/core/constants/app_asset.dart';
 import 'package:irish_locums/core/constants/app_color.dart';
-import 'package:irish_locums/core/constants/fonts.dart';
 import 'package:irish_locums/features/availability/presentation/widgets/app_bar_container.dart';
 import 'package:irish_locums/features/availability/presentation/widgets/availability_filter_modal.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:irish_locums/core/constants/app_asset.dart';
@@ -175,7 +173,6 @@ class _MyDocumentItemState extends State<MyDocumentItem> {
                       children: [
                         InkWell(
                           onTap: () {
-                            print('view');
                           },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -195,7 +192,6 @@ class _MyDocumentItemState extends State<MyDocumentItem> {
                         const Gap(15),
                         InkWell(
                           onTap: () {
-                            print('Edit');
                           },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -216,7 +212,6 @@ class _MyDocumentItemState extends State<MyDocumentItem> {
                         const Gap(15),
                         InkWell(
                           onTap: () {
-                            print('delete');
                           },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,

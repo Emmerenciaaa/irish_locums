@@ -20,7 +20,7 @@ class _MapListingViewWidgetState extends State<MapListingViewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    double _currentSliderValue = 20;
+    double currentSliderValue = 20;
 
     return SizedBox(
       height: double.infinity,
@@ -132,7 +132,7 @@ class _MapListingViewWidgetState extends State<MapListingViewWidget> {
                                   inactiveColor: AppColors.grey,
                                   max: 100,
                                   divisions: 5,
-                                  value: _currentSliderValue,
+                                  value: currentSliderValue,
                                   onChanged: (value) {},
                                 ),
                                 Row(

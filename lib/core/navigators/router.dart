@@ -31,7 +31,7 @@ import 'package:irish_locums/features/auth/presentation/pages/signup/employer_si
 import 'package:irish_locums/features/auth/presentation/pages/signup/employer_signup/uploads.dart';
 import 'package:irish_locums/features/auth/presentation/pages/signup/employer_signup/user_account.dart';
 import 'package:irish_locums/features/onboarding/pages/onboarding.dart';
-import 'package:irish_locums/features/onboarding/pages/splashScreen.dart';
+import 'package:irish_locums/features/onboarding/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 Route<T> onGenerateRoute<T>(RouteSettings settings) {

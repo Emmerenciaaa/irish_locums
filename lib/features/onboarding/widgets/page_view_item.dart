@@ -47,8 +47,8 @@ class PageViewWidget extends StatelessWidget {
               begin: Alignment.bottomRight,
               end: Alignment.topLeft,
               colors: <Color>[
-                Color(0xff216B89).withOpacity(0.65),
-                Color(0xff253966).withOpacity(0.65),
+                const Color(0xff216B89).withOpacity(0.65),
+                const Color(0xff253966).withOpacity(0.65),
               ], // Gradient from https://learnui.design/tools/gradient-generator.html
             ),
           ),
@@ -115,13 +115,13 @@ class PageViewWidget extends StatelessWidget {
                           activeColor:AppColors.yellow,
                         ),
                       ),
-                      Container(
+                      SizedBox(
                         height: 40,
                         width: 40,
                         child: FloatingActionButton(
                           backgroundColor: AppColors.yellow,
                           onPressed: onTap,
-                          child:Container(
+                          child:SizedBox(
                             height:25,
                             width: 25,
                             child: SvgPicture.asset(

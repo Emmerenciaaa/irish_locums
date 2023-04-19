@@ -1,6 +1,6 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:irish_locums/core/constants/app_asset.dart';

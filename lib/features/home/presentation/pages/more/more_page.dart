@@ -6,7 +6,6 @@ import 'package:irish_locums/core/constants/app_color.dart';
 import 'package:irish_locums/core/constants/fonts.dart';
 import 'package:irish_locums/core/navigators/route_name.dart';
 import 'package:irish_locums/features/availability/presentation/widgets/app_bar_container.dart';
-import 'package:irish_locums/features/home/presentation/pages/more/faqs_screen.dart';
 
 class MorePage extends StatelessWidget {
   const MorePage({super.key});

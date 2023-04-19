@@ -112,7 +112,7 @@ class _SignupCompanyState extends State<SignupCompany> {
                               height: 5,
                               decoration: const BoxDecoration(
                                   color: AppColors.indicatorActiveColor),
-                              child: Text(''),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
@@ -120,7 +120,7 @@ class _SignupCompanyState extends State<SignupCompany> {
                               height: 5,
                               decoration: const BoxDecoration(
                                   color: AppColors.indicatorActiveColor),
-                              child: Text(''),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
@@ -128,7 +128,7 @@ class _SignupCompanyState extends State<SignupCompany> {
                               height: 5,
                               decoration: const BoxDecoration(
                                   color: AppColors.dotColor),
-                              child: Text(''),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
@@ -136,7 +136,7 @@ class _SignupCompanyState extends State<SignupCompany> {
                               height: 5,
                               decoration: const BoxDecoration(
                                   color: AppColors.dotColor),
-                              child: Text(''),
+                              child: const Text(''),
                             ),
                             gapTiny,
                             Container(
@@ -144,7 +144,7 @@ class _SignupCompanyState extends State<SignupCompany> {
                               height: 5,
                               decoration: const BoxDecoration(
                                   color: AppColors.dotColor),
-                              child: Text(''),
+                              child: const Text(''),
                             ),
                           ],
                         )
